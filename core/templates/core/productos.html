@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'prodestilo.css'%}">
+{% endblock %}
+{% block content %}
+        <div id="productos">
+            {% for producto in productos %}
+            <div class="card">
+                <div class="producto">
+                    <h1>
+                        {{producto.nombre}}
+                    </h1>
+                    <img src="{% static producto.imagen %}" alt="">
+                    {% if producto.oferta %}
+                         <span><s>{{producto.tachado}}</s></span>
+                    {% else %}
+                        <span> </span>
+                    {% endif %}
+                    <h3>${{producto.precio}}</h3>
+                    <h4>Stock: {{producto.stock}}</h4>
+                    <a  class="botonesProds" href="{% url 'addtocar2' producto.codigo%}">Añadir al carrito</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </header>
+{% endblock %}

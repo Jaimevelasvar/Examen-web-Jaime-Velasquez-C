@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'suscripcion.css'%}">
+
+{% endblock %}
+{% block content %}
+
+<article id="fondo">
+    <section id="detalle">
+      <div class="card">
+        <h1 id="titulo">Suscripción</h1>
+          {% if suscrito %}
+            <h3>Ya estás suscrito.</h3>
+          {% else %}
+            <h3>Beneficios de estar suscrito: </h3>
+            <h5>Tendrás hasta un 5% de descuento en todas tus compras.</h5>
+            <form style="width: 50%;" action="{% url 'suscribir' %}" method="post">
+                {% csrf_token %}
+                <button class="btn">Suscribirse</button>
+            </form>
+            
+          {% endif %}
+      </div>
+    </section> 
+</article>
+
+{% endblock %}

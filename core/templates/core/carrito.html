@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'carrito.css'%}">
+{% endblock %}
+
+{% block content %}
+
+<section id="fondo">
+    
+    <section id="carro">
+        <div class="card">
+            <h1 id="titulo">Carrito</h1>
+            <table style="background-color: white;">
+                <thead>
+                    <tr>
+                        <th class="tb">Codigo</th>
+                        <th class="tb">Nombre</th>
+                        <th class="tb">Imagen</th>
+                        <th class="tb">Precio</th>
+                        <th class="tb">Cantidad</th>
+                        <th class="tb">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in carro %}
+                        <tr>
+                            <td class="tb2">{{item.0}}</td>
+                            <td class="tb2">{{item.1}}</td>
+                            <td class="tb2"> <img  style="height: 60px;" src="{% static item.2 %}" class="w-auto" alt="..." /></td>
+                            <td class="tb2">{{item.3}}</td>
+                            <td class="tb2">{{item.4}}</td>
+                            <td class="tb2">{{item.5}}</td>
+                            <td class="tb2"> <a href="{% url 'dropitem' item.0 %}"> <img id="borra" src="{% static 'imagenes/borrador.png' %}" alt=""> </a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% if not carro %}
+            <h2 style="width: 100; text-align: center;margin: 30px;">Tu carrito está vacío!.</h2>
+            {% else %}
+            <div class="comprar">
+                <a  href="{% url 'comprar' %}">Realizar Compra</a>
+            </div>
+            {% endif %}
+        </div>
+        
+    </section>
+
+</div>
+
+</section>
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'crud.css'%}">
+    {% endblock %}
+    {% block content %}
+        <div class="centro">
+            <div class="card">
+                <div id="agregar">
+                    <h1>
+                        Agregar Producto
+                    </h1>
+                    <h3>ID Producto:</h3>
+                    <input type="text" name="idProd" id="idProd">
+                    <h3>
+                        Nombre producto:
+                    </h3>
+                    <input type="text" name="nombreProd" id="nombreProd">
+                    <h3>
+                        Precio:
+                    </h3>
+                    <input type="text" name="precio" id="precio">
+                    <h3>
+                        Stock:
+                    </h3>
+                    <input type="text" name="stock" id="stock">
+                    <div id="botones">
+                        <button>Agregar Producto</button>
+                        <button>Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endblock %}

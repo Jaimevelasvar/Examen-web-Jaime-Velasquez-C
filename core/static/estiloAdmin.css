@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+header {
+    display: flex;
+    /* height: 90px; */
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+}
+
+* {
+    font-family: 'Khula', sans-serif;
+    margin: 0;
+}
+
+#arriba {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    padding: 0px 40px;
+    background-color: #256441;
+    color: white;
+}
+
+.link {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.p {
+    font-weight: 600;
+
+}
+
+#logeo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 320px;
+}
+
+/* .centro {
+    display: flex;
+    background-image: url(imagenes/jardin.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 648px;
+    margin: 0px;
+} */
+
+
+#logeo>h1 {
+    font-size: 6vh;
+    margin-top: 0px;
+}
+
+#logeo>h2 {
+    font-size: x-large;
+    margin-top: 30px;
+}
+
+#logeo>h3 {
+    cursor: pointer;
+    color: darkblue;
+    margin-top: 20px;
+}
+
+.submenu {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.submenu>img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.submenu>p {
+    cursor: pointer;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+#arriba>h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#abajo {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #92c43d;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+
+}
+
+footer a {
+    color: white;
+}
+
+.footer-info {
+    background-color: #322D2D;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    height: 70%;
+    align-items: center;
+    font-weight: 600;
+}
+
+.footer-info ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.footer-copyright {
+    height: 30%;
+    background-color: #282423;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-copyright img {
+    display: flex;
+    flex-direction: column;
+    height: 42px;
+    margin-bottom: 10px;
+}
+
+body {
+    color: #000;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: #8C9EFF;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+.link3{
+    color: #000;   
+}
+
+
+.card {
+    z-index: 0;
+    background-color: #ECEFF1;
+    padding-bottom: 20px;
+    /* margin-top: 90px; */
+    /* margin-bottom: 90px; */
+    border-radius: 10px;
+}
+
+.top {
+    padding-top: 40px;
+    padding-left: 13% !important;
+    padding-right: 13% !important;
+}
+
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.icon-content {
+    padding-bottom: 20px;
+}
+
+img {
+    height: 1;
+}
+
+/* TABLA COMPRAS */
+.intro {
+    height: 100%;
+}
+
+table td,
+table th {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+tbody td {
+    font-weight: 500;
+    color: #999999;
+}
+
+
+
+#contenido {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url('imagenes/jardin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#contenedor1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: 60px;
+}
+.intro{
+    margin-bottom: 15px;
+}
+
+
+
+#contenedor2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+
+@media screen and (max-width: 890px) {
+    #arriba>h1 {
+        font-size: x-large;
+    }
+
+    .footer-info>ul {
+        width: 350px;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 40px;
+    }
+
+    #contenedor2>img {
+        height: 20px;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+        margin: 2px;
+    }
+
+    .font-weight-bold {
+        font-size: xx-small;
+    }
+
+    .icon-content {
+        flex-direction: row;
+        width: 100px;
+    }
+
+    .submenu>img {
+        height: 25px;
+        width: 25px;
+        transition-duration: 2s;
+    }
+
+    .intro {
+        height: 500px;
+        width: 100%;
+    }
+
+    .intro {
+        font-size: 10px;
+    }
+
+    .prods{
+        height: 500px;
+        width: 100%;
+    }
+    
+    .prods{
+        font-size: 10px;
+    }
+
+    #desaparecer{
+        display: none;
+    }
+
+}
+
+.hide{
+    display: none;
+}
+.editar{
+    margin-left: 55px;
+}
+
+
+.show{
+    display: block;
+}

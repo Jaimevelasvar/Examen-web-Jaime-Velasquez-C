@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+#header{
+    display: flex;
+    height: 90px;
+    flex-direction: column;
+    margin: 0px;
+}
+*{
+    font-family: 'Khula', sans-serif;
+    margin: 0;
+}
+#arriba{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    padding: 0px 40px;
+    background-color: #256441;
+    color: white;
+
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.error{
+    background-color: red;
+}
+
+.centro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagenes/jardin.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    margin: 0px;
+}
+
+#div_id_username > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#div_id_apellido > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#div_id_nombre > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#div_id_email > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#div_id_password1 > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#div_id_password2 > div{
+    display: flex;
+    flex-direction: column;
+}
+
+    
+
+
+.card{
+    background-color: rgba(255,255,255,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    height: 700px;
+    margin: 0px;
+    width: 800px;
+}
+.label{
+    margin-top: 15px;
+}
+#hint_id_password1{
+    margin-left: 25px;
+}
+#registro > button{
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    background-color: #037838;
+    border-radius: 10px;
+    margin-left: 130px;
+    font-size: large;
+}
+#registro > button:hover{
+    background-color: white;
+}
+
+.submenu{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+#registro > div > div > input{
+    height: 25px;
+}
+#registro{
+    width: 60%;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.submenu > img{
+    width: 35px;
+    cursor: pointer;
+}
+p{
+    margin-left: 3px;
+}
+.submenu > p{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-left: 8px;
+    font-weight: 700;
+}
+#arriba > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#abajo{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #92c43d;
+}
+.boton > button{
+    height: 30px;
+    width: 130px;
+    margin-top: 25px;
+    font-weight: 300;
+    border-radius: 30px;
+}
+.boton > button:hover{
+    background: rgb(125, 226, 67);
+}
+.label{
+    font-weight: 600;
+    
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+footer a{
+color: white;
+text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.footer-info{
+    background-color: #322D2D;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    height: 70%;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-info ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.footer-copyright{
+    height: 30%;
+    background-color: #282423;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-copyright  img{
+    display: flex;
+    flex-direction: column;
+    height: 42px;
+    margin-bottom: 10px;
+}
+@media (max-width: 1000px) {
+    #arriba > h1{
+        font-size: x-large;
+    }
+    .submenu > img{
+        height: 25px;
+        width: 25px;
+        transition-duration: 2s;
+    }
+
+    .footer-info > ul{
+        width: 350px;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 40px;
+    }
+    .card{
+        height: 500px;
+        width: 400px;
+        margin-bottom: 150px;
+        margin-top: 100px;
+    }
+    #logeo > h1{
+        font-size: x-large;
+       
+    }
+    #logeo > h2{
+        font-size: medium;
+    }
+    
+}

@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'detalle.css'%}">
+
+{% endblock %}
+{% block content %}
+
+<article id="fondo">
+    <section id="detalle">
+      <div class="card">
+        <h1 id="titulo">Detalle de compra</h1>
+          <table id="historial" style="background-color: rgba(255, 255, 255, 0.868);">
+              <thead>
+                  <tr>
+                      <th class="tb">ID</th>
+                      <th class="tb">Venta</th>
+                      <th class="tb">Productos</th>
+                      <th class="tb">Cantidad</th>
+                      <th class="tb">Precio</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for detalle in detalleventa %}
+                      <tr>
+                          <td class="tb2">{{detalle.id}}</td>
+                          <td class="tb2">{{detalle.venta}}</td>
+                          <td class="tb2">{{detalle.producto}}</td>
+                          <td class="tb2">{{detalle.cantidad}}</td>
+                          <td class="tb2">{{detalle.precio}}</td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+    </section> 
+</article>
+
+{% endblock %}

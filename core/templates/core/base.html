@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  {% block head %}
+  {% endblock %}
+  <link rel="stylesheet" href="{% static 'estilo.css'%}">
+    <script src="{% static 'funciones.js' %}"></script>
+  </head>
+  <body>
+    <header>
+      <div id="arriba">
+        <div id="izquierda">
+          <img
+            src="{% static 'imagenes/kisspng-logo-landscaping-clip-art-palm-tree-logo-images-5aacf70a4a8240.6200533915212848743052.png' %}"
+            alt="" />
+          <h1>Tienda De Jardineria</h1>
+        </div>
+        <div id="derecha">
+          {% if user.is_authenticated%}
+              <a id="verperfil" style="text-decoration: none;" href="{% url 'perfil' %}">Ver Perfil</a>
+              {% if suscrito %}
+                 <strong>Suscrito👑</strong>
+              {% else %}
+                  <strong style="font-size: small;">No suscrito🚫</strong>
+              {% endif %}
+              <a id="cerrarsesion" style="text-decoration: none; color: black;" href="{% url 'logout'%}">Cerrar Sesión</a>
+          {% else %}
+            <div id="log">
+              <a class="link3" href="{% url 'login'%}">Iniciar Sesión</a>
+            </div>
+            <div id="reg">
+              <a class="link3" href="{% url 'registro'%}">Registrarse</a>
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+      <div id="abajo">
+        <div class="submenu">
+          <img src="{% static 'imagenes/icons8_home_50px.png' %}" alt="" />
+          <p>
+            <a style="text-decoration: none;" class="link" href="{% url 'home'%}">Inicio</a>
+          </p>
+        </div>
+        <div class="submenu">
+          <img src=" {% static 'imagenes/icons8_basket_50px.png' %}" alt="" />
+          <p>
+            <a style="text-decoration: none;" class="link" href="{% url 'productos'%}">Productos</a>
+          </p>
+        </div>
+        <div class="submenu">
+          <img src=" {% static 'imagenes/icons8_add_shopping_cart_50px.png' %}" alt="" />
+          <a style="text-decoration: none;" class="link" href="{% url 'carrito' %}">Carrito</a>
+        </div>
+        <div class="submenu">
+          <a style="text-decoration: none;" class="link" href="{% url 'suscribir' %}">Suscripción</a>
+        </div>
+      </div>
+  {% block content %}
+  {% endblock %}
+  <footer>
+    <div class="footer-info">
+      <ul>
+        <li><a href="{% url 'home'%}" class="text-decoration-none">Inicio</a></li>
+        <li>
+          <a href="{% url 'productos'%}" class="text-decoration-none">Productos</a>
+        </li>
+        <li><a href="{% url 'carrito' %}">Carrito</a></li>
+      </ul>
+    </div>
+    <div class="footer-copyright">
+      <span>
+        <img src=" {% static 'imagenes/logoduoc.png' %}" alt="" /> 2023 Copyright Duoc
+        UC</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+#carro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tb{
+    background-color: white;
+}
+.tb2{
+    background-color: white;
+    text-align: center;
+}
+#fondo{
+    background-image: url('imagenes/jardin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+table{
+    width: 90%;
+    margin-top: 20px;
+}
+th{
+    padding: 5px;
+}
+thead{
+    background-color: green;
+    color: black;
+}
+#titulo{
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+#borra{
+    height: 20px;
+    
+}
+.card{
+    margin: 40px;
+    background-color: rgba(242, 240, 240, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 1200px;
+    margin-bottom: 110px;
+}
+
+.comprar{
+    margin: 15px;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.comprar > a:hover{
+    background-color: #7da932;
+    transition-duration: .4s;
+}
+.comprar > a{
+    line-height: 50px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+    .card{
+        min-height: 300px;
+        width: 550px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #titulo{
+        margin-top: 20px;
+        font-size: xx-large;
+    }
+    
+    table{
+        height: 40px;
+        width: 120px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .tb{
+    font-size: medium;
+    }
+
+    #fondo{
+        min-height: 650px;
+    }
+
+    }
